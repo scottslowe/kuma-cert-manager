@@ -1,0 +1,9 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: kuma-ca-issuer
+  namespace: kuma-system
+spec:
+  ca:
+    secretName: kuma-root-ca-secret

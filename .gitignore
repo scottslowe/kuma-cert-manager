@@ -1,0 +1,5 @@
+# Ignore certificate files in case users accidentally generate them
+ca.crt
+ca-bundle
+tls.crt
+tls.key
