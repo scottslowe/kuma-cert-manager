@@ -2,11 +2,11 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: raw-kuma-tls-general
+  name: kuma-tls-general
   namespace: kuma-system
 spec:
-  commonName: kuma-tls-general-cert
-  secretName: raw-kuma-tls-general
+  commonName: kuma-tls-general
+  secretName: kuma-tls-general
   duration: 8760h # 1 year
   renewBefore: 360h # 15d
   subject:
@@ -26,6 +26,6 @@ spec:
     - kuma-control-plane.kuma-system
     - kuma-control-plane.kuma-system.svc
   issuerRef:
-    name: kuma-ca-issuer
+    name: kuma-ca-issuer # References Issuer based on kuma-root-ca
     kind: Issuer
     group: cert-manager.io

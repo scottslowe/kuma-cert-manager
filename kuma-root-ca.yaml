@@ -7,7 +7,7 @@ metadata:
 spec:
   isCA: true
   commonName: kuma-root-ca
-  secretName: kuma-root-ca-secret
+  secretName: kuma-root-ca
   duration: 43800h # 5 years
   renewBefore: 720h # 30d
   privateKey:
@@ -19,6 +19,6 @@ spec:
     - key encipherment
     - cert sign
   issuerRef:
-    name: selfsigned-issuer
+    name: selfsigned-issuer # References self-signed ClusterIssuer
     kind: ClusterIssuer
     group: cert-manager.io

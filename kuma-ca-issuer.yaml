@@ -6,4 +6,4 @@ metadata:
   namespace: kuma-system
 spec:
   ca:
-    secretName: kuma-root-ca-secret
+    secretName: kuma-root-ca # References secretName from kuma-root-ca Certificate
